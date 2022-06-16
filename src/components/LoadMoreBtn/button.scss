@@ -1,0 +1,21 @@
+@import '../../global/styles/constants';
+
+.rmdb-loadmorebtn {
+	background: $button-active;
+	width: 200px;
+	min-height: 50px;
+	text-align: center;
+	color: $color-white;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-family: 'Abel', sans-serif;
+	font-size: 22px;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	grid-column-start: 4;
+}
+
+.rmdb-loadmorebtn:hover {
+	opacity: 0.8;
+}

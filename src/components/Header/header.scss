@@ -1,0 +1,90 @@
+@import '../../global/styles/constants';
+
+.rmdb-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: auto;
+	background: $dark-accent;
+	box-sizing: border-box;
+}
+
+.rmdb-header-content {
+	max-width: 1280px;
+	min-height: 100px;
+	height: auto;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rmdb-logo {
+	width: 70px;
+	float: left;
+}
+
+.rmdb-tmdb-logo {
+	width: 122px;
+	float: right;
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	gap: 40px;
+}
+
+nav a:link,
+nav a:visited {
+	color: $text-color;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+nav a:hover,
+nav a:active {
+	color: $secondary-color;
+}
+
+@media screen and (max-width: 500px) {
+	.rmdb-header-content {
+		max-width: 1280px;
+		min-height: 0px;
+	}
+
+	.rmdb-tmdb-logo {
+		display: inline-block;
+		width: 80px;
+		margin-top: 0px;
+	}
+
+	.rmdb-logo {
+		width: 150px;
+		margin-top: 5px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.rmdb-header-content {
+		max-width: 100%;
+		min-height: 0px;
+		padding-right: 10px;
+	}
+	.rmdb-tmdb-logo {
+		display: inline-block;
+		width: 60px;
+		margin-top: 0px;
+	}
+
+	.rmdb-logo {
+		width: 60px;
+	}
+}
