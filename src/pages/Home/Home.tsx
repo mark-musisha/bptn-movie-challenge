@@ -1,14 +1,18 @@
 import { FC, useEffect } from 'react';
 import { HeroImage, FourColGrid } from '../../components';
+import { selectMovies } from '../../state';
 import { getPopularMovies } from '../../state/moviesSlice';
-import { useAppDispatch } from '../../state/store';
+import { useAppDispatch, useAppSelector } from '../../state/store';
 
 export const Home: FC = () => {
 	const dispatch = useAppDispatch();
+	const movies = useAppSelector(selectMovies);
 
 	useEffect(() => {
-		dispatch(getPopularMovies());
-	}, [dispatch]);
+		if (movies.length < 1) {
+			dispatch(getPopularMovies());
+		}
+	});
 
 	return (
 		<div className='rmdb-home'>
